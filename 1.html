@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>	Samman's App </title> 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="my_app.js"></script>
+<script>
+$(function(){
+	//$( "#sendSMS" ).on( "click", function(event){
+		//console.log("Hello World!");
+	//});<li role="presentation" class="divider"></li>
+$("#loc").hide();
+$("#sms").bind('click', function(evt){
+	$("#loc").show();
+	var appurl ="https://datadipity.com/clickslide/girlswhocodesms.json?update&PHPSESSID=gae519f8k5humje0jqb195nob6&debug&postparam[num]=12022129087&postparam[message]=Event: Deloitte Invterview Skills - Location: LKD 2001 - Time: 4 pm"
+
+	$.ajax({
+        type: "GET",
+        url: appurl,
+        crossDomain: true,
+        success: function (data) {
+            console.log("Made NML Request");
+        },
+        error: function (err) {
+            console.log("NML Failed!");
+            console.log(JSON.stringify(err));
+        }
+    });
+});
+})
+</script>
+
+<style>
+.box { border:1px; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Umakanta Neupane <small></h1><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;meals are free and will always be</small></h4>
+<!--<div class="dropdown">
+  <button class="btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+    <h4>October 10, 2014</h4>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">October 9, 2014</a></li>
+<li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">October 10, 2014</a></li>
+<li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">October 11, 2014</a></li>
+<li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">October 12, 2014</a></li>
+          <form class="navbar-form navbar-left" role="search" align="right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  </ul>
+</div>
+</div>-->
+<nav class="navbar navbar-default" role="navigation" aria-labelledby="dropdownMenu1">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<div class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Date <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">October 9</a></li>
+            <li><a href="#">October 10</a></li>
+            <li><a href="#">October 11</a></li>
+            <li class="divider"></li>
+            <li><a href="#">October 12</a></li>
+            <li class="divider"></li>
+            <li><a href="#">October 13</a></li>
+          </ul>
+        </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" align="right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Notification</a></li>
+		<li role="presentation" class="divider"></li>
+        <li><a href="#">Sound</a></li>
+		<li role="presentation" class="divider"></li><!--sa------------------------------as-->
+      </ul><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <li><a href="#">@Contact us</a></li>
+		<li role="presentation" class="divider"></li>
+		
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="loc" class="col-md-12">Event: Deloitte Invterview Skills<br>Location: LKD 2001<br>Time: 4 pm</div><br><br>
+  <div class="col-md-12">Event: Google Info Session<br>Location: LKD 2114<br>Time: 7 pm</div><br><br>
+  <div class="col-md-12">Event: Epic Rap Battle<br>Location: Somewhere<br>Time: whenever</div><br><br>
+<div class="container"><a class="btn btn-default" href="#" id="sms">Add New Location</a></div>
+  </div>
+
+</body>
+</html>
+
